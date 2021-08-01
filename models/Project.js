@@ -15,6 +15,14 @@ Project.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    description: {
+      type: DataTypes.STRING,
+    },
+    creationDate: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
     madeBy: {
       type: DataTypes.STRING,
       allowNull: false,
