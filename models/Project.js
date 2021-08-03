@@ -15,6 +15,14 @@ Project.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    description: {
+      type: DataTypes.STRING,
+    },
+    creationDate: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
     madeBy: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -25,6 +33,13 @@ Project.init(
     },
     peopleApplied: {
       type: DataTypes.STRING,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
   },
   {
