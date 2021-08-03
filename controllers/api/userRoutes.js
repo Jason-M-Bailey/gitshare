@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
 });
 
 // Update a user
-router.put('/:id', async (req, res) => {
+router.put('/edit/:id', async (req, res) => {
     try {
         const userData = await User.update(
             {
