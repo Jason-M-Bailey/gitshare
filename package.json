@@ -10,5 +10,29 @@
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5"
-  }
+  },
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
+  },
+  "name": "project2",
+  "description": "## Table of Contents",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jason-M-Bailey/project2.git"
+  },
+  "keywords": [
+    "Node",
+    "Handlebars",
+    "ORM"
+  ],
+  "author": "Jason Bailey, Shenilla Smith, Enrico Perkins, Ryan Crowder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jason-M-Bailey/project2/issues"
+  },
+  "homepage": "https://github.com/Jason-M-Bailey/project2#readme"
 }
