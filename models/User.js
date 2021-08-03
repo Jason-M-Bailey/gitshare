@@ -35,7 +35,16 @@ User.init(
         len: [8],
       },
     },
+    github: {
+      type: DataTypes.STRING,
+    },
+    linkedin: {
+      type: DataTypes.STRING,
+    },
     projectsApplied: {
+      type: DataTypes.STRING,
+    },
+    projectsCreated: {
       type: DataTypes.STRING,
     },
   },
