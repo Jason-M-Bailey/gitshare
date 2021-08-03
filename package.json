@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "seed": "node seeds/index.js"
+    "seed": "node seeds/seed.js"
   },
   "name": "project2",
   "description": "## Table of Contents",
