@@ -44,9 +44,11 @@ more to come...
 
 
 ## Contributors
-```
-Jason-M-Bailey
-CrowdeRyan
-SmithRBG
-evperkinsjr
-```
+
+* [Enrico Perkins](https://github.com/evperkinsjr)
+
+* [Jason Bailey](https://github.com/Jason-M-Bailey)
+
+* [Ryan Crowder](https://github.com/CrowdeRyan)
+
+* [Shenilla Smith](https://github.com/SmithRBG)
