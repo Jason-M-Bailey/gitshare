@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const {Project, User} = require('../models');
+const withAuth = require('../utils/auth');
 
 // Get all projects
 router.get('/', async (req, res) => {
@@ -21,6 +22,7 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
 // Get one project
 router.get('/project/:id', async (req, res) => {
     try {
@@ -42,9 +44,8 @@ router.get('/project/:id', async (req, res) => {
     }
 });
 
-// decide which authenticator we want to use
 // Get this user
-router.get('/profile', async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.session.user_id, {
             attributes: {exclude: ['password']},
