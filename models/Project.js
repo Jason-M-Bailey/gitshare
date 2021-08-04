@@ -27,7 +27,7 @@ Project.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    rolesNeeded: {
+    roleNeeded: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -37,8 +37,8 @@ Project.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
-        key: 'id',
+        model: "user",
+        key: "id",
       },
     },
   },
