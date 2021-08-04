@@ -61,5 +61,13 @@ router.get('/profile', withAuth, async (req, res) => {
     }
 });
 
+// If user is already logged in, redirect to profile page.
+router.get('/login', (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect('/profile');
+        return;
+    }
+    res.render('login');
+});
 
 module.exports = router;
