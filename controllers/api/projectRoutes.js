@@ -5,7 +5,10 @@ const withAuth = require('../../utils/auth');
 // Create a project
 router.post('/', withAuth, async (req, res) => {
     try {
-        const newProject = await Project.create(req.body);
+        const newProject = await Project.create({
+            ...req.body,
+            user_id: req.session.user_id,
+        });
         res.status(200).json(newProject);
     } catch (err) {
         res.status(400).json(err);
@@ -24,6 +27,7 @@ router.put('/edit/:id', withAuth, async (req,res) => {
             {
                 where: {
                     id: req.params.id,
+                    user_id: req.session.user_id,
                 },
             }
         );
@@ -43,6 +47,7 @@ router.delete('/:id', withAuth, async (req, res) => {
         const projectData = await Project.destroy({
             where: {
                 id: req.params.id,
+                user_id: req.session.user_id,
             },
         });
         if (!projectData) {
