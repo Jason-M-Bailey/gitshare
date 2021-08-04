@@ -15,6 +15,40 @@ router.post('/', async (req, res) => {
     }
 });
 
+// Login
+router.post('/login', async (req, res) => {
+    try {
+        const userData = await User.findOne({
+            where: {
+                email: req.body.email,
+            },
+        });
+
+        if (!userData) {
+            res.status(400).json({message: 'Wrong email or password. Please try again.'});
+            return;
+        }
+
+        const validPw = await userData.checkPassword(req.body.password);
+
+        if (!validPw) {
+            res.status(400).json({message: 'Wrong email or password. Please try again.'});
+            return;
+        }
+
+        req.session.save(() => {
+            req.session.user_id = userData.id;
+            req.session.logged_in = true;
+            res.status(200).json({user: userData, message: 'You are logged in.'});
+        });
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
+// Logout
+
+
 // Update a user
 router.put('/edit/:id', async (req, res) => {
     try {
