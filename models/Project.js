@@ -18,7 +18,7 @@ Project.init(
     description: {
       type: DataTypes.STRING,
     },
-    creationDate: {
+    date_created: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
