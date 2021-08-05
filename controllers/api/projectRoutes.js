@@ -1,10 +1,14 @@
 const router = require('express').Router();
 const {Project} = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // Create a project
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try {
-        const newProject = await Project.create(req.body);
+        const newProject = await Project.create({
+            ...req.body,
+            user_id: req.session.user_id,
+        });
         res.status(200).json(newProject);
     } catch (err) {
         res.status(400).json(err);
@@ -12,7 +16,7 @@ router.post('/', async (req, res) => {
 });
 
 // Update a project
-router.put('/edit/:id', async (req,res) => {
+router.put('/edit/:id', withAuth, async (req,res) => {
     try {
         const projectData = await Project.update(
             {
@@ -23,6 +27,7 @@ router.put('/edit/:id', async (req,res) => {
             {
                 where: {
                     id: req.params.id,
+                    user_id: req.session.user_id,
                 },
             }
         );
@@ -37,11 +42,12 @@ router.put('/edit/:id', async (req,res) => {
 });
 
 // Delete a project
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
     try {
         const projectData = await Project.destroy({
             where: {
                 id: req.params.id,
+                user_id: req.session.user_id,
             },
         });
         if (!projectData) {
