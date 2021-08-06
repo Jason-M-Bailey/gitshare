@@ -1,28 +1,20 @@
-
-{{#each projects as |project| }}
-<div class="container">
-  <div class="row">
-    <div class="col">
+{{#each projects as |project|}}
+  <div class="container">
+    <div class="row">
+      <div class="col">
 
         <h2 class="project">
-        <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-        
-        <a href="/project/{{project.id}}">{{project.name}}</a>
-      </h2>
+          <!-- Call helper function with triple brackets to render the emoji span as HTML -->
 
-      <!--Do you want to do people needed or skills needed? -->
-      <p class="peopleneeded">
-      <span class="people-amount">{{format_amount project.needed_funding}}</span>
-       people needed!
-      </p>
+          <a href="/project/{{project.id}}">{{project.name}}</a>
+        </h2>
 
-      <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
+        <p>Project Owner: {{project.user.name}} </p>
+        <p>Description: {{description}}</p>
+        <p>Role Needed: {{roleNeeded}}</p>
+        <p>Project Created: {{format_date project.date_created}}</p>
 
-      <p>
-      {{project.description}}
-    </p>
-
+      </div>
     </div>
   </div>
-</div>
 {{/each}}
