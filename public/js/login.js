@@ -30,11 +30,13 @@ const loginFormHandler = async (event) => {
     const password = document.querySelector('#password-signup').value.trim();
     // github
     const github = document.querySelector('#github-signup').value.trim();
+
+    console.log(name, email, password, github);
   
     if (name && email && password && github) {
       const response = await fetch('/api/users', {
         method: 'POST',
-        body: JSON.stringify({ name, email, password }),
+        body: JSON.stringify({ name, email, password, github }),
         headers: { 'Content-Type': 'application/json' },
       });
   

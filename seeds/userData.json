@@ -1,17 +1,26 @@
 [
   {
     "name": "Jason",
-    "email": "bailey@hotmail.com",
-    "password": "password12345"
+    "email": "jason@mail.com",
+    "password": "password12345",
+    "github": "jason-m-bailey"
   },
   {
     "name": "Shenilla",
     "email": "smith@gmail.com",
-    "password": "password12345"
+    "password": "password12345",
+    "github": "SmithRBG"
   },
   {
     "name": "Enrico",
     "email": "perkins@aol.com",
-    "password": "password12345"
+    "password": "password12345",
+    "github": "evperkinsjr"
+  },
+  {
+    "name": "Ryan",
+    "email": "ryan@email.com",
+    "password": "password12345",
+    "github": "CrowdeRyan"
   }
 ]
