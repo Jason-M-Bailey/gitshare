@@ -17,8 +17,6 @@ html {
   text-decoration: underline;
 }
 
-
-
 .hero {
     background-image: url(computer\ stock.jpg);
     background-size: cover;
@@ -26,14 +24,8 @@ html {
     font-size: 25px;
     font-weight: bold;
     text-shadow: 3px 3px black;
-    /* background-color: lightblue; */
     opacity: .8;
     filter: grayscale(50%);
-  /*   padding: 150px; */
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center; */
 }
 
 .title1 { /*title logo*/
@@ -95,6 +87,7 @@ html {
 .cardFlex { /* strictly the box of each card, able to flex apart.*/
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   
 }
 
@@ -107,6 +100,14 @@ html {
   text-align: left;
 }
 
+.colorHeader {
+  background-color: #c6ebc6;
+}
+
+.btn1 {
+  margin: 5px;
+}
+
 .titlemove {
   padding-top: 25px;
 }
@@ -114,6 +115,7 @@ html {
 .flexin {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .proSpace {
@@ -123,3 +125,14 @@ html {
 .proCenter {
   text-align: center;
 }
+
+/*fixing the homepage flexboxes*/
+.homeSpace {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items:flex-start;
+  flex:2;
+}
+
