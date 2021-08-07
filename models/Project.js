@@ -28,7 +28,7 @@ Project.init(
       allowNull: false,
     },
     applicants: {
-      type: DataTypes.ARRAY,
+      type: DataTypes.STRING,
     },
     user_id: {
       type: DataTypes.INTEGER,

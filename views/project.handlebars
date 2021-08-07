@@ -1,29 +1,35 @@
 <div class="text-center card proCenter">
-  
+
   <h2 class="title proSpace">{{name}}</h2>
   {{!-- <p>{{{get_emoji}}}</p> --}}
   <div class="card-content">
     <div class="content">
-  <p>Project created by <strong> {{user.name}} </strong> on <strong> {{format_date date_created}} </strong></p>
-  <p>{{description}}</p>
-  
-  {{!-- changed from camel case --}}
-  <p>Role Needed: <strong> {{role_needed}}</strong></p>
-    
-  {{!-- <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p> --}}
+      <p>Project created by
+        <strong> {{user.name}} </strong>
+        on
+        <strong> {{format_date date_created}} </strong></p>
+      <p>{{description}}</p>
 
+      {{! changed from camel case }}
+      <p>Role Needed: <strong> {{role_needed}}</strong></p>
 
+      {{#if projects.applicants.length}}
+        <div class="card">
+          <h3 class="card-header card-header-title currentID">Current
+            Applications:</h3>
+          <p><strong> {{applicants}}</strong></p>
 
-  <p>
-    <button class="btn btn-primary button is-success">Apply for this role!</button>
-  </p>
+        </div>
+      {{/if}}
 
-  <a href="mailto:{{user.email}}?subject={{name}}">Send an email to {{user.name}} to apply for this role</a>
-  </div>
+      <p>
+        <button class="btn btn-primary button is-success">Apply for this role!</button>
+      </p>
+
+      <a href="mailto:{{user.email}}?subject={{name}}">Send an email to
+        {{user.name}}
+        to apply for this role</a>
+    </div>
   </div>
 
 </div>
