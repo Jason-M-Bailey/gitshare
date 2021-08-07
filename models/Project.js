@@ -23,17 +23,17 @@ Project.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    madeBy: {
+    // madeBy: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
+    role_needed: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    roleNeeded: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    peopleApplied: {
-      type: DataTypes.STRING,
-    },
+    // peopleApplied: {
+    //   type: DataTypes.STRING,
+    // },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
