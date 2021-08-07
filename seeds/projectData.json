@@ -9,12 +9,14 @@
     "name": "Project 2 - HTML",
     "description": "Come up with an Idea to outsmart the rest of the class",
     "role_needed": "HTML",
-    "madeBy": "Enrico"
+    "madeBy": "Enrico",
+    "applicants": "Shenilla"
   },
   {
     "name": "The Super Ultimate Tech Quiz",
     "description": "Design a quiz to stump Mahesh, Thyra, and especially Sendy",
     "role_needed": "ORM",
-    "madeBy": "Jason"
+    "madeBy": "Jason",
+    "applicants": "Enrico"
   }
 ]
