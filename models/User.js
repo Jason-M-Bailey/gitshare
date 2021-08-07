@@ -38,10 +38,10 @@ User.init(
     github: {
       type: DataTypes.STRING,
     },
-    linkedin: {
-      type: DataTypes.STRING,
-    },
-    projectsApplied: {
+    // linkedin: {
+    //   type: DataTypes.STRING,
+    // },
+    projects_applied: {
       type: DataTypes.STRING,
     },
     projectsCreated: {
