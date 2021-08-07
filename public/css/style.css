@@ -110,3 +110,8 @@ html {
 .titlemove {
   padding-top: 25px;
 }
+
+.flexin {
+  display: flex;
+  justify-content: space-around;
+}
