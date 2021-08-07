@@ -115,3 +115,11 @@ html {
   display: flex;
   justify-content: space-around;
 }
+
+.proSpace {
+  padding: 20px;
+}
+
+.proCenter {
+  text-align: center;
+}
