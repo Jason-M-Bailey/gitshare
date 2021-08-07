@@ -1,68 +1,67 @@
-<div class="row">
-  <div class="col-auto">
+<div class="container">
+  <div class="title titlemove">
     <h2>Welcome, {{name}}!</h2>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create a New Project:</h3>
+<!-- Above is where we will put the linking for github feature Jason created-->
 
-    <form class="form new-project-form">
-      <div class="form-group">
-        <label for="project-name">project name:</label>
-        <input
-          class="form-input"
-          type="text"
-          id="project-name"
-          name="project-name"
-        />
+<div class="cardFlex"> <!-- this might change-->
+  <div class="card">
+    
+    <h3 class=" card-header card-header-title">Create a New Project:</h3>
+
+    <form class="form card-content">
+
+      <div class="field">
+        <label class="label">Project Name</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Project Name">
+          </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Roles Needed</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Roles Needed">
+          </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Project Description:</label>
+         <div class="control">
+          <textarea class="textarea" id="project-desc" placeholder="Write your project description here..."></textarea>
+        </div>
       </div>
 
       <div class="form-group">
-        <label for="project-desc">description:</label>
-        <textarea
-          class="form-input"
-          id="project-desc"
-          name="project-desc"
-        ></textarea>
+        <button type="submit" class="button is-success">Create</button>
       </div>
 
-      <div class="form-group">
-        <label for="project-role">role needed:</label>
-        <textarea
-          class="form-input"
-          type="text"
-          id="project-role"
-          name="project-role"
-        ></textarea>
-      </div>
-
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
     </form>
   </div>
 
+  
   {{#if projects.length}}
-    <div class="col-md-6 project-list">
-      <h3>Current Projects:</h3>
+  <div class="card">
+    <h3 class=" card-header card-header-title currentID">Current Projects:</h3>
 
-      {{#each projects as |project|}}
-        <div class="row mb-2">
-          <div class="col-md-8">
-            <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
-          </div>
-          <div class="col-md-4">
-            <button
-              class="btn btn-sm btn-danger"
-              data-id="{{project.id}}"
-            >DELETE</button>
-          </div>
-        </div>
-      {{/each}}
+    {{#each projects as |project|}}
+    <div class="card-content">
+      
+      <div class="col-md-8">
+        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+      </div>
+
+      <div class="col-md-4">
+        <button class="button is-danger" data-id="{{project.id}}">Delete</button>
+      </div>
+
     </div>
+    {{/each}}
+  </div>
   {{/if}}
+
 </div>
 
 <script src="./js/profile.js"></script>
