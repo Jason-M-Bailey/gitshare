@@ -3,24 +3,28 @@
     "name": "Jason",
     "email": "jason@mail.com",
     "password": "password12345",
-    "github": "jason-m-bailey"
+    "github": "jason-m-bailey",
+    "projects_applied": "Project 2 - CSS"
   },
   {
     "name": "Shenilla",
     "email": "smith@gmail.com",
     "password": "password12345",
-    "github": "SmithRBG"
+    "github": "SmithRBG",
+    "projects_applied": "Project 2 - HTML"
   },
   {
     "name": "Enrico",
     "email": "perkins@aol.com",
     "password": "password12345",
-    "github": "evperkinsjr"
+    "github": "evperkinsjr",
+    "projects_applied": "The Super Ultimate Tech Quiz"
   },
   {
     "name": "Ryan",
     "email": "ryan@email.com",
     "password": "password12345",
-    "github": "CrowdeRyan"
+    "github": "CrowdeRyan",
+    "projects_applied": "The Super Ultimate Tech Quiz"
   }
 ]
