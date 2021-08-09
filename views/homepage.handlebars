@@ -1,5 +1,7 @@
+<div class="homeSpace">
+
 {{#each projects as |project|}}
-  <div class="container">
+  <div class="container box"> <!--box is showing the breakdown-->
     <div class="row">
       <div class="col">
 
@@ -9,12 +11,13 @@
           <a href="/project/{{project.id}}">{{project.name}}</a>
         </h2>
 
-        <p>Project Owner: {{project.user.name}} </p>
-        <p>Description: {{description}}</p>
-        <p>Role Needed: {{role_needed}}</p>
-        <p>Project Created: {{format_date project.date_created}}</p>
+        <p><strong>Owner:</strong> {{project.user.name}} </p>
+        <p><strong>Description:</strong> {{description}}</p>
+        <p><strong>Role(s) Needed:</strong> {{role_needed}}</p>
+        <p><strong>Created:</strong> {{format_date project.date_created}}</p>
 
       </div>
     </div>
   </div>
 {{/each}}
+</div>

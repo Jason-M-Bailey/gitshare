@@ -23,24 +23,17 @@ Project.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    // madeBy: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
     role_needed: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // peopleApplied: {
-    //   type: DataTypes.STRING,
-    // },
-    // creator_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: "creator",
-    //     key: "id",
-    //   },
-    // },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id",
+      },
+    },
   },
   {
     sequelize,
