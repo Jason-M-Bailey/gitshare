@@ -1,21 +1,10 @@
-// module.exports = function (sequelize, DataTypes) {
-//   var Applicant = sequelize.define(
-//     "applicant",
-//     {},
-//     {
-//       tableName: "applicants",
-//     }
-//   );
-//   return Applicant;
-// };
-
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-// create our Trip model
+// create our Applicant model
 class Applicant extends Model {}
 
-// create fields/columns for Trip model
+// create fields/columns for Applicant model
 Applicant.init(
   {
     id: {
