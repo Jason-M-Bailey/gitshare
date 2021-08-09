@@ -37,12 +37,6 @@ User.init(
     github: {
       type: DataTypes.STRING,
     },
-    // linkedin: {
-    //   type: DataTypes.STRING,
-    // },
-    // projects_applied: {
-    //   type: DataTypes.STRING,
-    // },
     projectsCreated: {
       type: DataTypes.STRING,
     },
@@ -68,14 +62,5 @@ User.init(
     modelName: "user",
   }
 );
-
-// URLSearchParams.associate = function (models) {
-//   User.belongsToMany(models.Projects, {
-//     through: models.Applicant,
-//     as: "user",
-//     foreignKey: "user_id",
-//   });
-// };
-// return User;
 
 module.exports = User;
