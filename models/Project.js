@@ -34,13 +34,13 @@ Project.init(
     // peopleApplied: {
     //   type: DataTypes.STRING,
     // },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "user",
-        key: "id",
-      },
-    },
+    // creator_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "creator",
+    //     key: "id",
+    //   },
+    // },
   },
   {
     sequelize,
@@ -50,5 +50,14 @@ Project.init(
     modelName: "project",
   }
 );
+
+// Project.associate = function (models) {
+//   Projects.belongsToMany(models.user_id, {
+//     through: models.Applicant,
+//     as: "applicant",
+//     foreignKey: "project_id",
+//   });
+// };
+// return Project;
 
 module.exports = Project;

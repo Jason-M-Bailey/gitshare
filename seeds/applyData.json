@@ -1,11 +1,14 @@
 [
-    {
-      "name":,
-    },
-    {
-      "name":,
-    },
-    {
-      "name":,
-    }
-  ]
+  {
+    "User_id": 3,
+    "Project_id": 1
+  },
+  {
+    "User_id": 1,
+    "Project_id": 2
+  },
+  {
+    "User_id": 3,
+    "Project_id": 2
+  }
+]
