@@ -27,9 +27,6 @@ Project.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    applicants: {
-      type: DataTypes.ARRAY,
-    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -46,5 +43,14 @@ Project.init(
     modelName: "project",
   }
 );
+
+// Project.associate = function (models) {
+//   Projects.belongsToMany(models.user_id, {
+//     through: models.Applicant,
+//     as: "applicant",
+//     foreignKey: "project_id",
+//   });
+// };
+// return Project;
 
 module.exports = Project;
