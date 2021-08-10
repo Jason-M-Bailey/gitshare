@@ -1,25 +1,17 @@
 <div class="text-center">
   <h2>{{name}}</h2>
-  {{!-- <p>{{{get_emoji}}}</p> --}}
   <p>Project created by {{user.name}} on {{format_date date_created}}</p>
   <p>{{description}}</p>
-  
-  {{!-- changed from camel case --}}
+
+  {{! changed from camel case }}
   <p>Role Needed: {{role_needed}}</p>
-    
-  {{!-- <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p> --}}
-
-
 
   <p>
     <button class="btn btn-primary">Apply for this role!</button>
   </p>
 
-  <a href="mailto:{{user.email}}?subject={{name}}">Send an email to {{user.name}} to apply for this role</a>
-
+  <a href="mailto:{{user.email}}?subject={{name}}">Send an email to
+    {{user.name}}
+    to apply for this role</a>
 
 </div>
