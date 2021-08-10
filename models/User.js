@@ -7,6 +7,7 @@ class User extends Model {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
+
 User.init(
   {
     id: {
@@ -35,6 +36,12 @@ User.init(
       },
     },
     github: {
+      type: DataTypes.STRING,
+    },
+    // linkedin: {
+    //   type: DataTypes.STRING,
+    // },
+    projects_applied: {
       type: DataTypes.STRING,
     },
     projectsCreated: {
