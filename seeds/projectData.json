@@ -1,22 +1,20 @@
 [
   {
-    "name": "Project 2 - CSS",
+    "name": "Project 2",
     "description": "Come up with an Idea to outsmart the rest of the class",
     "role_needed": "CSS",
     "madeBy": "Enrico"
   },
   {
-    "name": "Project 2 - HTML",
+    "name": "Project 2",
     "description": "Come up with an Idea to outsmart the rest of the class",
     "role_needed": "HTML",
-    "madeBy": "Enrico",
-    "applicants": "Shenilla"
+    "madeBy": "Enrico"
   },
   {
     "name": "The Super Ultimate Tech Quiz",
     "description": "Design a quiz to stump Mahesh, Thyra, and especially Sendy",
     "role_needed": "ORM",
-    "madeBy": "Jason",
-    "applicants": "Enrico"
+    "madeBy": "Jason"
   }
 ]
