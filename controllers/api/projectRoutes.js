@@ -20,7 +20,6 @@ router.get("/projects", async (req, res) => {
     include: [
       {
         model: User,
-        attributes: ["name"],
       },
     ],
   }).then((data) => res.json(data));

@@ -8,8 +8,7 @@ router.get("/", async (req, res) => {
     const projectData = await Project.findAll({
       include: [
         {
-          model: User,
-          attributes: ["name", "email"],
+          model: User
         },
       ],
     });
@@ -29,8 +28,7 @@ router.get("/project/:id", async (req, res) => {
     const projectData = await Project.findByPk(req.params.id, {
       include: [
         {
-          model: User,
-          attributes: ["name"],
+          model: User
         },
       ],
     });
