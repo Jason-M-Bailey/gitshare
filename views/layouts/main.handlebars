@@ -1,80 +1,70 @@
-<!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Git Share!</title>
-  <!-- <link rel="stylesheet" href="/css/jass.css"> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-  <link rel="stylesheet" href="/css/style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git Share!</title>
+    <!-- <link rel="stylesheet" href="/css/jass.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
 
-<body>
-  <header>
+  <body>
+    <header>
+      <div>
+        <div class="nav1">
+          <a href="/" class="title1">Git Share</a>
+          <nav class="login">
+            <!-- Conditionally render login or logout links -->
+            {{#if logged_in}}
+              <a href="/profile">profile</a>
+              |
+              <button class="no-button" id="logout">logout</button>
+            {{else}}
+              <a href="/login">login</a>
+            {{/if}}
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero is-medium is-link">
+      <div class="hero-body">
+        <p class="title">
+          Get Help With Projects From Around The Globe
+        </p>
+        <p class="subtitle">
+          Get Started with GIT SHARE
+        </p>
+      </div>
+    </section>
+
     <div>
-      <div class="nav1">
-        <a href="/" class="title1">Git Share</a>
-         <nav class="login">
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-      </div>
+      <main>
+        <!-- Render the sub layout -->
+        {{{body}}}
+      </main>
+      <footer>
+
+      </footer>
     </div>
-  </header>
 
-    {{!-- <header>
-      <div class= "notification is-primary">
-      <h1>
-        <a href="/" class="title">Git Share</a>
-      </h1>
-      <nav class="login">
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-      </div>
-    </header>  --}}
-
-<section class="hero is-medium is-link">
-  <div class="hero-body">
-    <p class="title">
-      Get Help With Projects From Around The Globe
-    </p>
-    <p class="subtitle">
-      Get Started with GIT SHARE
-    </p>
-  </div>
-</section>
-
-
- <div>
-    <main>
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
-    <footer>
-      
+    <footer class="footer">
+      <p>The company
+        <strong>Git Share</strong>
+        is Trademarked by
+        <a href="https://github.com/Jason-M-Bailey/project2"><strong
+          >EJRS</strong></a>
+        LLC Incorporated.</p>
     </footer>
-  </div>
 
-  <footer class="footer">
-    <p>The company <strong>Git Share</strong> is Trandmarked by <a href="https://github.com/Jason-M-Bailey/project2"><strong>EJRS</strong></a> LLC Incorporated.</p>
-  </footer>
-
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
+  </body>
 
 </html>

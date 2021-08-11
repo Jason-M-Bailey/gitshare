@@ -1,5 +1,7 @@
+<div class="homeSpace">
+
 {{#each projects as |project|}}
-  <div class="container">
+  <div class="container box">
     <div class="row">
       <div class="col">
 
@@ -11,10 +13,14 @@
 
         <p>Project Owner: {{project.user.name}} </p>
         <p>Description: {{description}}</p>
+        <p><a href="{{github_repo}}" target="_blank">Github Repo</a></p>
         <p>Role Needed: {{role_needed}}</p>
         <p>Project Created: {{format_date project.date_created}}</p>
+        <p>User email: {{user.email}}</p>
 
       </div>
     </div>
   </div>
 {{/each}}
+
+</div>

@@ -1,30 +1,26 @@
 [
   {
-    "name": "Jason",
-    "email": "jason@mail.com",
-    "password": "password12345",
-    "github": "jason-m-bailey",
-    "projects_applied": "Project 2 - CSS"
+    "name": "Joe",
+    "email": "joe@mail.com",
+    "password": "pass123",
+    "github": "jason-m-bailey"
   },
   {
-    "name": "Shenilla",
-    "email": "smith@gmail.com",
-    "password": "password12345",
-    "github": "SmithRBG",
-    "projects_applied": "Project 2 - HTML"
+    "name": "Sally",
+    "email": "sally@gmail.com",
+    "password": "pass123",
+    "github": "SmithRBG"
   },
   {
-    "name": "Enrico",
-    "email": "perkins@aol.com",
-    "password": "password12345",
-    "github": "evperkinsjr",
-    "projects_applied": "The Super Ultimate Tech Quiz"
+    "name": "Eric",
+    "email": "eric@mail.com",
+    "password": "pass123",
+    "github": "evperkinsjr"
   },
   {
-    "name": "Ryan",
-    "email": "ryan@email.com",
-    "password": "password12345",
-    "github": "CrowdeRyan",
-    "projects_applied": "The Super Ultimate Tech Quiz"
+    "name": "Robert",
+    "email": "robert@mail.com",
+    "password": "pass123",
+    "github": "CrowdeRyan"
   }
 ]

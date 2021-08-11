@@ -1,20 +1,26 @@
 [
   {
-    "name": "Project 2 - CSS",
-    "description": "Come up with an Idea to outsmart the rest of the class",
-    "role_needed": "CSS",
-    "madeBy": "Enrico"
+    "name": "NBA Player Search",
+    "github_repo": "https://github.com/Jason-M-Bailey/nbaplayersearch",
+    "description": "An app to look up nba players, learn more about their stats and history. And most importantly, to know more than your friends so you can win those arguments about whether LeBron is better than Kobe.",
+    "role_needed": "CSS"
   },
   {
-    "name": "Project 2 - HTML",
-    "description": "Come up with an Idea to outsmart the rest of the class",
-    "role_needed": "HTML",
-    "madeBy": "Enrico"
+    "name": "Movie Drink Matchmaker",
+    "github_repo": "https://github.com/evperkinsjr/movie-drink-matchmaker",
+    "description": "A movie night app that provides the user with a movie and drink recommendation based on their selections.",
+    "role_needed": "HTML"
   },
   {
-    "name": "The Super Ultimate Tech Quiz",
-    "description": "Design a quiz to stump Mahesh, Thyra, and especially Sendy",
-    "role_needed": "ORM",
-    "madeBy": "Jason"
+    "name": "Employee Tracker",
+    "github_repo": "https://github.com/CrowdeRyan/Employee_Tracker",
+    "description": "A command line application to view, add, remove and update a company's employees. This application utilizes Node.js, Inquirer and MySQL, and is written with JavaScript.",
+    "role_needed": "ORM"
+  },
+  {
+    "name": "E-Commerce Backend",
+    "github_repo": "https://github.com/SmithRBG/E-Commerce_Back_End",
+    "description": "Command-line application serves as the back end of an e-commerce site.",
+    "role_needed": "JavaScript"
   }
 ]
