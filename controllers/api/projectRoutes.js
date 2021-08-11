@@ -15,6 +15,17 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
+router.get("/projects", async (req, res) => {
+  Project.findAll({
+    include: [
+      {
+        model: User,
+        attributes: ["name"],
+      },
+    ],
+  }).then((data) => res.json(data));
+});
+
 // Update a project
 router.put("/edit/:id", withAuth, async (req, res) => {
   try {

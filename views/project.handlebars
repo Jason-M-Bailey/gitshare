@@ -1,17 +1,19 @@
-<div class="text-center">
-  <h2>{{name}}</h2>
-  <p>Project created by {{user.name}} on {{format_date date_created}}</p>
-  <p>{{description}}</p>
 
-  {{! changed from camel case }}
-  <p>Role Needed: {{role_needed}}</p>
+<div class="text-center card proCenter">
+  <h2 class="title proSpace">{{name}}</h2>
 
-  <p>
-    <button class="btn btn-primary">Apply for this role!</button>
-  </p>
+  <p>Project created by <strong> {{user.name}} </strong> on <strong> {{format_date date_created}} </strong></p>
+
+  <p>Description: {{description}}</p>
+  <p>Visit this project's <a href="{{github_repo}}" target="_blank">Github repo</a> to apply to join.</p>
+
+
+  <p>Role Needed: <strong> {{role_needed}}</strong></p>
 
   <a href="mailto:{{user.email}}?subject={{name}}">Send an email to
     {{user.name}}
-    to apply for this role</a>
+    at ---{{user.email}}--- to apply for this role with the
+    {{name}}
+    project.</a>
 
 </div>

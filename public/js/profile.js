@@ -2,13 +2,14 @@ const newFormHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector("#project-name").value.trim();
+  const github_repo = document.querySelector("#github-repo").value.trim();
   const description = document.querySelector("#project-desc").value.trim();
   const role_needed = document.querySelector("#project-role").value.trim();
 
-  if (name && description && role_needed) {
+  if (name && github_repo && description && role_needed) {
     const response = await fetch(`/api/projects`, {
       method: "POST",
-      body: JSON.stringify({ name, description, role_needed }),
+      body: JSON.stringify({ name, github_repo, description, role_needed }),
       headers: {
         "Content-Type": "application/json",
       },

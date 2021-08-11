@@ -15,6 +15,10 @@ Project.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    github_repo: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     description: {
       type: DataTypes.STRING,
     },
