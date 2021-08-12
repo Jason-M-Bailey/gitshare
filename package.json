@@ -12,7 +12,7 @@
     "sequelize": "^6.6.5"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "node seeds/seed.js && node server.js",
     "seed": "node seeds/seed.js"
   },
   "name": "project2",
