@@ -27,28 +27,21 @@ router.get("/projects", async (req, res) => {
 });
 
 // Update a project
-router.put("/edit/:id", withAuth, async (req, res) => {
+router.put('/:id', async (req,res) => {
   try {
-    const projectData = await Project.update(
-      {
-        name: req.body.name,
-        description: req.body.description,
-        rolesNeeded: req.body.rolesNeeded,
-      },
-      {
-        where: {
-          id: req.params.id,
-          user_id: req.session.user_id,
-        },
+      const projectData = await Project.update(req.body, {
+            where: {
+                id: req.params.id,
+                user_id: req.session.user_id,
+            },
+          });
+      if (!projectData) {
+          res.status(400).json({message: 'No project found with that id.'});
+      } else {
+        res.status(200).json([{message: 'project updated'}, projectData[0]]);
       }
-    );
-    if (!projectData) {
-      res.status(400).json({ message: "No project found with that id." });
-      return;
-    }
-    res.status(200).json(projectData);
   } catch (err) {
-    res.status(400).json(err);
+      res.status(400).json(err);
   }
 });
 
