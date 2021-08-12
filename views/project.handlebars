@@ -19,11 +19,17 @@
 
   <p>Role Needed: <strong> {{role_needed}}</strong></p>
 
+  {{#if logged_in}}
   <a href="mailto:{{user.email}}?subject={{name}}">Send an email to
     {{user.name}}
     at ---{{user.email}}--- to apply for this role with the
     {{name}}
     project.</a>
+    {{else}}
+  <p>
+    <a href="/login"><button class="button is-info" id="loginBtn">Log in to apply!</button></a>
+  </p>
+  {{/if}}
 
 </div>
 
