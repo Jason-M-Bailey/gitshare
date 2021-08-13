@@ -1,25 +1,25 @@
 <div class="homeSpace">
 
-{{#each projects as |project|}}
-  <div class="container box">
-    <div class="row">
-      <div class="col">
+  {{#each projects as |project|}}
+    <div class="container box">
+      <div class="row">
+        <div class="col">
 
-        <h2 class="project">
+          <h2 class="project">
 
-          <a href="/project/{{project.id}}">{{project.name}}</a>
-        </h2>
+            <a href="/project/{{project.id}}">{{project.name}}</a>
+          </h2>
 
-        <p>Project Owner: {{project.user.name}} </p>
-        <p>Description: {{description}}</p>
-        <p><a href="{{github_repo}}" target="_blank">Github Repo</a></p>
-        <p>Role Needed: {{role_needed}}</p>
-        <p>Project Created: {{format_date project.date_created}}</p>
-        <p>User email: {{user.email}}</p>
+          <p>Project Owner: {{project.user.name}} </p>
+          <p>Description: {{description}}</p>
+          <p><a href="{{github_repo}}" target="_blank">Github Repo</a></p>
+          <p>Role Needed: {{role_needed}}</p>
+          <p>Project Created: {{format_date project.date_created}}</p>
+          <p>User email: {{user.email}}</p>
 
+        </div>
       </div>
     </div>
-  </div>
-{{/each}}
+  {{/each}}
 
 </div>

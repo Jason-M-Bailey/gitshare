@@ -1,18 +1,24 @@
-
 <div class="text-center card proCenter">
   <h2 class="title proSpace">{{name}}</h2>
 
-  <p>Project created by <strong> {{user.name}} </strong> on <strong> {{format_date date_created}} </strong></p>
+  <p>Project created by
+    <strong> {{user.name}} </strong>
+    on
+    <strong> {{format_date date_created}} </strong></p>
 
   <p>Description: {{description}}</p>
-  <p>Visit this project's <a href="{{github_repo}}" target="_blank">Github repo</a> to apply to join.</p>
-
+  <p>Visit this project's
+    <a href="{{github_repo}}" target="_blank">Github repo</a>
+    to apply to join.</p>
 
   <p>Role Needed: <strong> {{role_needed}}</strong></p>
 
+  {{! <p><i>***Please follow link to My Github Repo and add your infomation to the
+      "Issues" page.***</i></p> }}
+
   <a href="mailto:{{user.email}}?subject={{name}}">Send an email to
     {{user.name}}
-    at ---{{user.email}}--- to apply for this role with the
+    to learn more about
     {{name}}
     project.</a>
 
