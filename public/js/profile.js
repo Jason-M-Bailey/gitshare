@@ -43,6 +43,14 @@ document
   .querySelector(".new-project-form")
   .addEventListener("submit", newFormHandler);
 
-document
+/* document
+  .querySelector(".project-list")
+  .addEventListener("click", delButtonHandler); */
+
+if (document.querySelector('.project-list')) {
+  document
   .querySelector(".project-list")
   .addEventListener("click", delButtonHandler);
+} else {
+  console.log('No projects listed.');
+}
