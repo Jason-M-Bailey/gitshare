@@ -1,10 +1,18 @@
 <div class="text-center card proCenter">
   <h2 class="title proSpace">{{name}}</h2>
 
-  <p>Project created by
-    <strong> {{user.name}} </strong>
-    on
-    <strong> {{format_date date_created}} </strong></p>
+
+  {{#if logged_in}}
+  <div class="col-sm-2">
+    <button
+      class="button is-text" id="edit-btn"
+      data-id="{{id}}"
+    >Edit Details</button>
+  </div>
+  {{/if}}
+
+  <p>Project created by <strong> {{user.name}} </strong> on <strong> {{format_date date_created}} </strong></p>
+
 
   <p>Description: {{description}}</p>
   <p>Visit this project's
@@ -13,13 +21,64 @@
 
   <p>Role Needed: <strong> {{role_needed}}</strong></p>
 
-  {{! <p><i>***Please follow link to My Github Repo and add your infomation to the
-      "Issues" page.***</i></p> }}
+
+  {{#if logged_in}}
 
   <a href="mailto:{{user.email}}?subject={{name}}">Send an email to
     {{user.name}}
     to learn more about
     {{name}}
     project.</a>
+    {{else}}
+  <p>
+    <a href="/login"><button class="button is-info" id="loginBtn">Log in to apply!</button></a>
+  </p>
+  {{/if}}
 
 </div>
+
+{{!-- Modal start --}}
+<div class="modal" id="update-form-modal" data-id="{{project.id}}">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Edit Project Details</p>
+      <button class="delete" aria-label="close" id="modal-close" onclick="closeFunction()"></button>
+    </header>
+    <section class="modal-card-body">
+      <!-- Content ... -->
+      {{!-- Form --}}
+      <form class="update-project-form" data-id="{{project.id}}">
+        <div class="field">
+          <label class="label">Project Name</label>
+          <div class="control">
+            <input class="input" type="text" id="update-project-name" value="{{name}}">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Github Repo</label>
+          <div class="control">
+            <input class="input" type="text" id="update-github-repo" value="{{github_repo}}">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Description</label>
+          <div class="control">
+            <input class="input" type="text" id="update-project-description" value="{{description}}">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Role Needed</label>
+          <div class="control">
+            <input class="input" type="text" id="update-role-needed" value="{{role_needed}}">
+          </div>
+        </div>
+      </form>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success save-btn" data-id="{{id}}">Save changes</button>
+      <button class="button" onclick="closeFunction()">Cancel</button>
+    </footer>
+  </div>
+</div>
+{{!-- Modal End --}}
