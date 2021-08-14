@@ -24,11 +24,7 @@
 
   {{#if logged_in}}
 
-  <a href="mailto:{{user.email}}?subject={{name}}">Send an email to
-    {{user.name}}
-    to learn more about
-    {{name}}
-    project.</a>
+  <a href="mailto:{{user.email}}?subject={{name}}"><button class="button is-primary">Email {{user.name}} to apply</button></a>
     {{else}}
   <p>
     <a href="/login"><button class="button is-info" id="loginBtn">Log in to apply!</button></a>

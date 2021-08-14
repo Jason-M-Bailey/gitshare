@@ -58,7 +58,7 @@ router.delete("/:id", withAuth, async (req, res) => {
       res.status(400).json({ message: "No project found with that id." });
       return;
     }
-    res.status(400).json(projectData);
+    res.status(200).json(projectData);
   } catch (err) {
     res.status(500).json(err);
   }
